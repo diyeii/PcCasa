@@ -1,16 +1,24 @@
-package ejerciciosPojos.instituto;
+package ejerciciosPojos.edificio;
 
 import java.util.Objects;
 
-public class Student {
+public class Propietario {
+    private String nif;
     private String name;
     private String surname;
-    private String address;
 
-    public Student(String name, String surname, String address) {
+    public Propietario(String nif, String name, String surname) {
+        this.nif = nif;
         this.name = name;
         this.surname = surname;
-        this.address = address;
+    }
+
+    public String getNif() {
+        return nif;
+    }
+
+    public void setNif(String nif) {
+        this.nif = nif;
     }
 
     public String getName() {
@@ -29,25 +37,15 @@ public class Student {
         this.surname = surname;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        Student student = (Student) o;
-        return Objects.equals(name, student.name) && Objects.equals(surname, student.surname) && Objects.equals(address, student.address);
+        Propietario that = (Propietario) o;
+        return Objects.equals(nif, that.nif) && Objects.equals(name, that.name) && Objects.equals(surname, that.surname);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, surname, address);
+        return Objects.hash(nif, name, surname);
     }
 }
-
-
