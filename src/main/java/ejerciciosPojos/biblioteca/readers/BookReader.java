@@ -1,5 +1,6 @@
 package ejerciciosPojos.biblioteca.readers;
 
+import ejerciciosPojos.biblioteca.models.Autor;
 import ejerciciosPojos.biblioteca.models.Book;
 
 import java.util.Scanner;
@@ -24,7 +25,15 @@ public class BookReader {
         int n = scanner.nextInt();
         scanner.nextLine();
 
+        System.out.println("Escriba los autores del libro: ");
+        int autores = scanner.nextInt();
+        scanner.nextLine();
 
+        Autor[] autors = new Autor[autores];
+        for (int i = 0; i < autors.length; i++) {
+            autors[i] = autorReader.read();
 
+        }
+        return new Book(isbn, name,  n, autors);
     }
 }

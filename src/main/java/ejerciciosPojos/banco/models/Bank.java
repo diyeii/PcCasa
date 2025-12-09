@@ -1,4 +1,4 @@
-package ejerciciosPojos.banco;
+package ejerciciosPojos.banco.models;
 
 import java.util.Objects;
 

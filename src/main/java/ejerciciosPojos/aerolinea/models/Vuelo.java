@@ -1,4 +1,4 @@
-package ejerciciosPojos.aerolinea;
+package ejerciciosPojos.aerolinea.models;
 
 import java.util.Objects;
 
