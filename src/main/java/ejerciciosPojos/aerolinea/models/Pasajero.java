@@ -1,16 +1,18 @@
-package ejerciciosPojos.edificio;
+package ejerciciosPojos.aerolinea.models;
 
 import java.util.Objects;
 
-public class Propietario {
+public class Pasajero {
     private String nif;
     private String name;
     private String surname;
+    private String seat;
 
-    public Propietario(String nif, String name, String surname) {
+    public Pasajero(String nif, String name, String surname, String seat) {
         this.nif = nif;
         this.name = name;
         this.surname = surname;
+        this.seat = seat;
     }
 
     public String getNif() {
@@ -37,15 +39,23 @@ public class Propietario {
         this.surname = surname;
     }
 
+    public String getSeat() {
+        return seat;
+    }
+
+    public void setSeat(String seat) {
+        this.seat = seat;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        Propietario that = (Propietario) o;
-        return Objects.equals(nif, that.nif) && Objects.equals(name, that.name) && Objects.equals(surname, that.surname);
+        Pasajero pasajero = (Pasajero) o;
+        return Objects.equals(nif, pasajero.nif) && Objects.equals(name, pasajero.name) && Objects.equals(surname, pasajero.surname) && Objects.equals(seat, pasajero.seat);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nif, name, surname);
+        return Objects.hash(nif, name, surname, seat);
     }
 }

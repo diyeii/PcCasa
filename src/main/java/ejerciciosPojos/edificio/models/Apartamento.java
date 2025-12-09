@@ -1,4 +1,4 @@
-package ejerciciosPojos.edificio;
+package ejerciciosPojos.edificio.models;
 
 import java.util.Objects;
 
